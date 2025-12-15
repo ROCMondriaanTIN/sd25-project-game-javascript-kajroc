@@ -1,13 +1,34 @@
 "use strict"
-//het opstart bestand, de functie start wordt als eerste uitgevoerd
-//met de voorbeeld code kan je de geklite letters zien in je console!
+
 window.onload=start;
 
 
 function start()
 {
-    //koppel de eventhandler aan de letters
     bindButtons();
 }
 
+document.addEventListener('DOMContentLoaded', ()=>{
+Game.initElements({
+prevDisplay: 'prevDisplay',
+dice: 'dice',
+message: 'message',
+wins: 'wins',
+losses: 'losses',
+streak: 'streak',
+higher: 'higher',
+lower: 'lower',
+rollFirst: 'rollFirst',
+reset: 'reset'
+});
+
+
+Game.els.higher.addEventListener('click', ()=> Game.handleGuess('higher'));
+Game.els.lower.addEventListener('click', ()=> Game.handleGuess('lower'));
+Game.els.rollFirst.addEventListener('click', ()=> Game.rollFirst());
+Game.els.reset.addEventListener('click', ()=> Game.reset());
+
+
+Game.updateUI();
+});
 

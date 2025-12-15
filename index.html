@@ -1,19 +1,67 @@
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hoger, Lager</title>
-  <link rel="stylesheet" href="../p02-js-project2/css/styles.css">
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Higher or Lower — Dice</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script
+      type="text/javascript"
+      src="../p02-js-project2/js/controller/controller.js"
+      defer
+    ></script>
+    <script
+      type="text/javascript"
+      src="../p02-js-project2/js/model/hangman.js"
+      defer
+    ></script>
+    <script
+      type="text/javascript"
+      src="../p02-js-project2/js/view/view.js"
+      defer
+    ></script>
+    <script
+      type="text/javascript"
+      src="../p02-js-project2/js/start.js"
+      defer
+    ></script>
+    <script src="higher-lower.js"></script>
+    <script src="view.js"></script>
+    <script src="start.js"></script>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Higher or Lower — Dobbelsteen 🎲</h1>
+      <div class="prev">Vorige worp: <span id="prevDisplay">—</span></div>
+      <div id="dice" class="dice">—</div>
+      <div id="message" class="message">
+        Klik op "Startwaarde" om te beginnen, gok daarna hoger of lager.
+      </div>
 
-  <script type="text/javascript"  src="../p02-js-project2/js/controller/controller.js" defer> </script>
-  <script type="text/javascript" src="../p02-js-project2/js/model/hangman.js" defer> </script>
-  <script type="text/javascript" src="../p02-js-project2/js/view/view.js" defer> </script>
-  <script type="text/javascript"  src="../p02-js-project2/js/start.js" defer> </script>
-</head>
-<body>
-  <h2>Lager, Hoger</h2>
-</body>
+      <div class="buttons">
+        <button id="higher" class="btn-guess">Hoger ▲</button>
+        <button id="lower" class="btn-guess">Lager ▼</button>
+      </div>
+
+      <div class="scoreboard">
+        <div>Wins: <span id="wins">0</span></div>
+        <div>Losses: <span id="losses">0</span></div>
+        <div>Streak: <span id="streak">0</span></div>
+      </div>
+
+      <div style="display: flex; gap: 8px; margin-top: 12px">
+        <button id="rollFirst" class="btn-reset" style="flex: 1">
+          Startwaarde
+        </button>
+        <button id="reset" class="btn-reset" style="flex: 1">Reset</button>
+      </div>
+
+      <footer>
+        Tip: dobbelsteen is 1–6. Een gelijkspel verandert de score niet.
+      </footer>
+    </div>
+
+    <script src="higher-lower.js"></script>
+    <script src="start.js"></script>
+  </body>
 </html>
-
