@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Hoger / Lager – Dobbelsteen 🎲</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div class="card">
+    <h1>Hoger / Lager — Dobbelsteen 🎲</h1>
+
+    <div class="prev">
+      Vorige worp: <span id="prevDisplay">—</span>
+    </div>
+
+    <div id="dice" class="dice">—</div>
+
+    <div id="message" class="message">
+      Klik op "Startwaarde" om te beginnen
+    </div>
+
+    <div class="buttons">
+      <button id="higher">Hoger ▲</button>
+      <button id="lower">Lager ▼</button>
+    </div>
+
+    <div class="scoreboard">
+      <div>Wins: <span id="wins">0</span></div>
+      <div>Losses: <span id="losses">0</span></div>
+      <div>Streak: <span id="streak">0</span></div>
+    </div>
+
+    <div class="buttons">
+      <button id="rollFirst">Startwaarde</button>
+      <button id="reset">Reset</button>
+    </div>
+  </div>
+
+  <!-- JavaScript (ORDER MATTERS) -->
+  <script src="js/hangman.js"></script>
+  <script src="js/view.js"></script>
+  <script src="js/start.js"></script>
+</body>
+</html>
